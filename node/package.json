@@ -4,7 +4,9 @@
   "scripts": {
     "start": "bun run src/main.ts"
   },
-  "dependencies": {},
+  "dependencies": {
+    "mysql2": "^3.14.1"
+  },
   "devDependencies": {
     "typescript": "^5.0.0",
     "ts-node": "^10.9.0",

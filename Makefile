@@ -50,6 +50,12 @@ run-rust:
 	@echo "Running Rust playground..."
 	@cd $(RUST_DIR) && cargo run
 
+
+.PHONY: copy-env
+copy-env:
+	@echo "Copying .env file..."
+	@cp .env.sample .env
+
 # Clean generated files
 .PHONY: clean
 clean:
@@ -72,5 +78,6 @@ help:
 	@echo "  make run-go       	 - Run Go playground"
 	@echo "  make setup-rust     - Set up Rust playground"
 	@echo "  make run-rust     	 - Run Rust playground"
+	@echo "  make copy-env       - Copy .env file from .env.sample"
 	@echo "  make clean        	 - Clean generated files"
 	@echo "  make help         	 - Show this help message"
