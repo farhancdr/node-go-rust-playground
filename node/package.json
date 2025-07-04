@@ -1,0 +1,16 @@
+{
+  "name": "node-playground",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "bun run src/main.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "@types/bun": "latest"
+  },
+  "module": "index.ts",
+  "type": "module",
+  "private": true
+}

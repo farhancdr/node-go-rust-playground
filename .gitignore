@@ -1,0 +1,29 @@
+# Node.js/TypeScript
+node_modules/
+dist/
+*.log
+npm-debug.log
+yarn-error.log
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+vendor/
+
+# Rust
+target/
+*.rlib
+*.pdb
+*.dSYM/
+
+# General
+.DS_Store
+*.swp
+*.swo
+.env
+*.bak
+*.tmp
