@@ -5,7 +5,12 @@
     "start": "bun run src/main.ts"
   },
   "dependencies": {
-    "mysql2": "^3.14.1"
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.1.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1",
+    "p-limit": "^6.2.0"
   },
   "devDependencies": {
     "typescript": "^5.0.0",

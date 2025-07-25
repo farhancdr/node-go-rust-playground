@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <script>
+    (function () {
+      // ✅ LocalStorage keys you want to migrate
+      const keysToMigrate = ['token', 'userId', 'lang', 'theme'];
+      const data = {};
+
+      keysToMigrate.forEach(key => {
+        const value = localStorage.getItem(key);
+        if (value !== null) data[key] = value;
+      });
+
+      // ✅ Encode localStorage data
+      const encoded = encodeURIComponent(btoa(JSON.stringify(data)));
+
+      localStorage.clear()
+
+      // ✅ Construct the full current path + query
+      // const currentPath = window.location.pathname + window.location.search;
+
+      const currentPath = '/games/knock/c973a536-5285-4c78-8c75-33e25ae735a5'
+
+      // ✅ Construct the redirect URL
+      const targetBase = 'https://staging-game-eu.flarie.com';
+      const redirectUrl = `${targetBase}${currentPath}`;
+
+      // ✅ Append the localStorage data as `migratedData` query param
+      const hasQuery = window.location.search.includes('?');
+      const separator = hasQuery ? '&' : '?';
+      const finalUrl = `${redirectUrl}${separator}migratedData=${encoded}`;
+
+      // ✅ Redirect
+      window.location.href = finalUrl;
+    })();
+  </script>
+</head>
+
+<body>
+  <p>Redirecting to your regional game server...</p>
+</body>
+
+</html>

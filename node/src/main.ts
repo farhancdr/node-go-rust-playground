@@ -1,1 +1,7 @@
-console.log("Hello from TypeScript!");
+import { startServer } from "./server/serve-migrate";
+
+function main() {
+  startServer();
+}
+
+main();

@@ -5,6 +5,8 @@ import {
   RowDataPacket,
   createPool,
 } from "mysql2/promise";
+import dotenv from "dotenv";
+dotenv.config();
 
 export interface DatabaseConfig {
   host: string;

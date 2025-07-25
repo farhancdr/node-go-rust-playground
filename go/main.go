@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import split_audio "go-playground/pkg"
 
 func main() {
-    fmt.Println("Hello from Go!")
+	split_audio.RunSplitAudio()
 }
