@@ -1,7 +1,7 @@
 package main
 
-import split_audio "go-playground/pkg"
+import "go-playground/pkg/ast2"
 
 func main() {
-	split_audio.RunSplitAudio()
+	ast2.ZapToZero2()
 }
